@@ -19,14 +19,13 @@ Student.prototype.getAverage = function () {
   if (!this.marks || this.marks.length === 0) {
     return 0;
   }
-  let overage = this.marks.reduce((sum, mark, index, marksArray) => {
+  return this.marks.reduce((sum, mark, index, marksArray) => {
     sum += mark;
     if (index === marksArray.length - 1) {
       return sum / marksArray.length;
     }
       return sum;
   }, 0);
-  return overage;
 }
 
 Student.prototype.exclude = function (reason) {
